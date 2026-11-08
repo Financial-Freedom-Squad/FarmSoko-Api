@@ -7,3 +7,4 @@ categoryRouter.get('/', getAllCategories);
 categoryRouter.get('/:id', getCategoryById);
 
 export default categoryRouter;
+

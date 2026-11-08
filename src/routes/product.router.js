@@ -16,3 +16,4 @@ productRouter.put('/:id', updateProduct);
 productRouter.delete('/:id', deleteProduct);
 
 export default productRouter;
+

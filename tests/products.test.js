@@ -94,3 +94,4 @@ describe('Products API Endpoints', () => {
     assert.ok(response.body.errors.length > 0);
   });
 });
+
