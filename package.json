@@ -1,0 +1,33 @@
+{
+  "name": "farmsoko-api",
+  "version": "1.0.0",
+  "description": "A RESTful API for FarmSoko agricultural marketplace",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "node --test tests/**/*.test.js"
+  },
+  "keywords": [
+    "farmsoko",
+    "express",
+    "nodejs",
+    "rest-api",
+    "marketplace",
+    "agriculture"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "helmet": "^8.3.0",
+    "morgan": "^1.12.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "supertest": "^7.3.2"
+  }
+}
