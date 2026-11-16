@@ -3,6 +3,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 import { config } from './config/env.js';
 import { requestLogger } from './middlewares/logger.middleware.js';
+import { apiRateLimiter } from './middlewares/rateLimiter.middleware.js';
 import { notFoundHandler } from './middlewares/notFound.middleware.js';
 import { errorHandler } from './middlewares/error.middleware.js';
 import apiRouter from './routes/api.router.js';
@@ -12,6 +13,7 @@ const app = express();
 
 // Security Middlewares
 app.use(helmet());
+app.use(apiRateLimiter);
 app.use(
   cors({
     origin: config.clientUrl === '*' ? '*' : [config.clientUrl],
@@ -39,4 +41,3 @@ app.use(notFoundHandler);
 app.use(errorHandler);
 
 export default app;
-

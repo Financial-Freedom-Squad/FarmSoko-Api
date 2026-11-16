@@ -7,7 +7,11 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "test": "node --test tests/**/*.test.js"
+    "test": "node --test tests/**/*.test.js",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio"
   },
   "keywords": [
     "farmsoko",
@@ -15,18 +19,26 @@
     "nodejs",
     "rest-api",
     "marketplace",
-    "agriculture"
+    "agriculture",
+    "drizzle-orm",
+    "postgresql"
   ],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
     "dotenv": "^18.0.9",
+    "drizzle-orm": "^0.45.4",
     "express": "^5.3.0",
+    "express-rate-limit": "^8.7.4",
     "helmet": "^8.3.0",
-    "morgan": "^1.12.1"
+    "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.12.1",
+    "pg": "^8.23.1"
   },
   "devDependencies": {
+    "drizzle-kit": "^0.31.11",
     "nodemon": "^3.1.14",
     "supertest": "^7.3.2"
   }
